@@ -23,7 +23,7 @@ jobs:
       - name: Test
         run: go test ./...
 
-  code-quality:  
+  check-code-quality:  
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -33,7 +33,7 @@ jobs:
         with:
           version: v1.56.2
 
-  push:  
+  push-to-docker-repo:  
     runs-on: ubuntu-latest
     needs: build
     steps:
